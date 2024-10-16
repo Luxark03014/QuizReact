@@ -3,7 +3,7 @@ import { Header } from './Header'
 import { Footer } from './Footer'
 import { Introduction } from './Introduction'
 import { Quiz } from './Quiz'
-import { useEffect } from 'react'
+
 
 import './assets/style.css';
 

@@ -4,8 +4,8 @@ export const Quiz = () => {
     const [preguntasQuiz, setPreguntasQuiz] = useState([]);
     const [preguntas, setPreguntas] = useState([]);
     const [indicePregunta, setIndicePregunta] = useState(0);
-
-
+    const [numeroRespuestasCorrectas, setNumeroRespuestasCorrectas] = useState(0)
+    const [respuesta, setRespuesta] = useState({})
     useEffect(() => {
         const cargarPreguntas = async () => {
             const response = await fetch("./preguntas.json");
@@ -39,58 +39,66 @@ export const Quiz = () => {
         setPreguntasQuiz([...preguntasQuiz, ...nuevasPreguntas]);
         setIndicePregunta(indicePregunta + 2);
     };
-    let numeroRespuestasCorrectas = 0
-    const validarPregunta = (value, index, e) => {
 
-        const respuestaCorrecta = preguntasQuiz[index].respuesta_correcta
-        const botones = document.querySelectorAll(" .boton-opcion");
-        botones.forEach((boton) => {
-            boton.style.backgroundColor = "white"; 
-        });
-
-        e.target.style.backgroundColor = "grey"; 
-        if (value == respuestaCorrecta) {
-            console.log("MUY BIEN")
-            numeroRespuestasCorrectas++
+    const validarPregunta = () => {
+       
+    
+       const respuestaSeleccionada = document.querySelectorAll('input:checked')
+       const allInputs = document.querySelectorAll('input[type="radio"]');
+       allInputs.forEach((radio) => {
+        radio.setAttribute('disabled', true); 
+    });
+       respuestaSeleccionada.forEach((input) => {
+        const preguntaIndex = parseInt(input.name.split('-')[1]); 
+        const respuestaValue = input.value;
+        console.log(preguntaIndex)
+        
+        if (respuestaValue === preguntas[preguntaIndex].respuesta_correcta) {
+            console.log(`Pregunta ${preguntaIndex + 1}: CORRECTO`);
+            setNumeroRespuestasCorrectas(numeroRespuestasCorrectas + 1)
+            
+        } else {
+            console.log(`Pregunta ${preguntaIndex + 1}: INCORRECTO`);
         }
-        else if (value != respuestaCorrecta) {
-            console.log("HAS FALLADO")
-        }
-
+       
+        
+    
     }
     
+)
+input.setAttribute('disabled', true)
+;
+    }
+
     return (
         <div>
             <h2>Quiz</h2>
-            
+
             <div>
                 {preguntasQuiz.map((pregunta, index) => (
                     <div key={index}>
-                        <h3>{pregunta.pregunta}</h3>
-                        <ul>
-                            <li>
-                                <button onClick={(e) => validarPregunta("A", index, e)} className="boton-opcion" value="A">A</button>
-                                {pregunta.opciones.A}
-                            </li>
-                            <li>
-                                <button onClick={(e) => validarPregunta("B", index, e)} className="boton-opcion" value="B">B</button>
-                                {pregunta.opciones.B}
-                            </li>
-                            <li>
-                                <button onClick={(e) => validarPregunta("C", index, e)} className="boton-opcion" value="C">C</button>
-                                {pregunta.opciones.C}
-                            </li>
-                            <li>
-                                <button onClick={(e) => validarPregunta("D", index, e)} className="boton-opcion" value="D">D</button>
-                                {pregunta.opciones.D}
-                            </li>
+                        <label>{pregunta.pregunta}</label>
+                        <form>
 
-                        </ul>
+                            <input type="radio" name={`pregunta-${index}`} value="A" />
+                            <label > {pregunta.opciones.A}</label>
+
+                            <input type="radio"name={`pregunta-${index}`} value="B" />
+                            <label >{pregunta.opciones.B}</label>
+
+                            <input type="radio"name={`pregunta-${index}`} value="C" />
+                            <label > {pregunta.opciones.C}</label>
+
+                            <input type="radio"name={`pregunta-${index}`} value="D" />
+                            <label> {pregunta.opciones.D}</label>
+
+
+                        </form>
 
                     </div>
 
                 ))}
-                <BotonComprobar />
+                 <button type='submit' onClick={validarPregunta}>COMPROBAR</button>
                 <button onClick={añadirPreguntas}>Siguiente</button>
             </div>
         </div>
