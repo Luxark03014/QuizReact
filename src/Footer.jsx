@@ -1,8 +1,8 @@
 export function Footer(){
     return(
-        <header>
+        <footer>
             ESTE ES EL FOOTER
-        </header>
+        </footer>
     )
 
 }
