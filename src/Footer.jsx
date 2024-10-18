@@ -1,8 +1,7 @@
-export function Footer(){
-    return(
-        <footer>
-            ESTE ES EL FOOTER
+export function Footer() {
+    return (
+        <footer className="footer">
+            
         </footer>
-    )
-
+    );
 }

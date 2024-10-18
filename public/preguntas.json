@@ -1,7 +1,7 @@
 {
     "concurso": [
       {
-        "pregunta": "¿Cuál es el ingrediente principal de la tortilla española?",
+        "pregunta": "¿Cuál es el ingrediente principal de la tortilla española? 🥘",
         "opciones": {
           "A": "Carne",
           "B": "Patata",
@@ -11,7 +11,7 @@
         "respuesta_correcta": "B"
       },
       {
-        "pregunta": "¿De qué región es típico el gazpacho?",
+        "pregunta": "¿De qué región de España es típico el gazpacho?",
         "opciones": {
           "A": "Cataluña",
           "B": "Galicia",
@@ -21,7 +21,7 @@
         "respuesta_correcta": "D"
       },
       {
-        "pregunta": "¿Qué marisco se utiliza principalmente en la elaboración de la paella marinera?",
+        "pregunta": "¿Qué marisco se utiliza principalmente en la paella marinera? 🥘",
         "opciones": {
           "A": "Calamares",
           "B": "Mejillones",
@@ -31,7 +31,7 @@
         "respuesta_correcta": "C"
       },
       {
-        "pregunta": "¿Cuál de estos platos es una sopa fría?",
+        "pregunta": "¿Cuál de estos platos es una sopa que se toma fría?🍜",
         "opciones": {
           "A": "Fabada",
           "B": "Cocido madrileño",
@@ -41,7 +41,7 @@
         "respuesta_correcta": "D"
       },
       {
-        "pregunta": "¿Qué embutido es típico de la región de Salamanca?",
+        "pregunta": "¿Qué embutido es típico de Salamanca?🌭",
         "opciones": {
           "A": "Chistorra",
           "B": "Chorizo",
@@ -51,7 +51,7 @@
         "respuesta_correcta": "D"
       },
       {
-        "pregunta": "¿Cuál es el postre típico de Cataluña?",
+        "pregunta": "¿Cuál es el postre típico de Cataluña?🔴🟡",
         "opciones": {
           "A": "Leche frita",
           "B": "Flan",
@@ -71,7 +71,7 @@
         "respuesta_correcta": "C"
       },
       {
-        "pregunta": "¿Qué tipo de queso es originario de la región de La Mancha?",
+        "pregunta": "¿Qué tipo de queso es originario de la región de La Mancha?🧀",
         "opciones": {
           "A": "Queso manchego",
           "B": "Queso Cabrales",
@@ -81,7 +81,7 @@
         "respuesta_correcta": "A"
       },
       {
-        "pregunta": "¿Qué ingrediente es indispensable en el 'pisto manchego'?",
+        "pregunta": "¿Qué ingrediente es indispensable en el 'pisto manchego'?🍆🥒",
         "opciones": {
           "A": "Huevo",
           "B": "Patatas",
@@ -91,7 +91,7 @@
         "respuesta_correcta": "D"
       },
       {
-        "pregunta": "¿Cuál es el plato más famoso de Asturias?",
+        "pregunta": "¿Cuál es el plato más famoso de Asturias?🍽️",
         "opciones": {
           "A": "Fabada",
           "B": "Rabo de toro",
@@ -101,7 +101,7 @@
         "respuesta_correcta": "A"
       },
       {
-        "pregunta": "¿Cuál de estos platos se come tradicionalmente en Semana Santa?",
+        "pregunta": "¿Cuál de estos platos se come tradicionalmente en Semana Santa? ✝️",
         "opciones": {
           "A": "Rosquillas",
           "B": "Torrijas",
@@ -111,7 +111,7 @@
         "respuesta_correcta": "B"
       },
       {
-        "pregunta": "¿Qué bebida se asocia con las fiestas de San Fermín en Pamplona?",
+        "pregunta": "¿Qué bebida se asocia con las fiestas de San Fermín en Pamplona?🐂",
         "opciones": {
           "A": "Kalimoxto",
           "B": "Sangría",
